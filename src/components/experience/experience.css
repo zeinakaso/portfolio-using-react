@@ -1,0 +1,111 @@
+/* ================= GRID ================= */
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+/* ================= BOX ================= */
+.experience-box {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 2.2rem;
+  border-radius: 1.5rem;
+
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+
+  transition: var(--transition);
+}
+
+/* Hover effect 🔥 */
+.experience-box:hover {
+  transform: translateY(-10px);
+  border-color: var(--color-primary);
+}
+
+/* ================= TITLE ================= */
+.experience-box h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+}
+
+/* ================= TIMELINE ================= */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+/* LINE */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--color-primary),
+    transparent
+  );
+}
+
+/* ================= ITEM ================= */
+.timeline-item {
+  margin-bottom: 2.2rem;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+/* DOT (احترافي) */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 6px;
+
+  width: 10px;
+  height: 10px;
+
+  background: var(--color-primary);
+  border-radius: 50%;
+
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+/* ================= TEXT ================= */
+.timeline-item span {
+  font-size: 0.75rem;
+  color: var(--color-light);
+  letter-spacing: 0.5px;
+}
+
+.timeline-item h4 {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  color: var(--color-white);
+}
+
+.timeline-item p {
+  font-size: 0.85rem;
+  color: var(--color-light);
+  line-height: 1.6;
+}
+
+/* ================= HOVER DETAILS ================= */
+.timeline-item:hover h4 {
+  color: var(--color-primary);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .experience-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

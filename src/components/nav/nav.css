@@ -1,0 +1,57 @@
+/* ================= NAV ================= */
+nav {
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(15px);
+
+  width: max-content;
+  padding: 0.7rem 1.5rem;
+
+  z-index: 1000;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2rem;
+
+  display: flex;
+  gap: 0.8rem;
+
+  border-radius: 3rem;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ================= LINKS ================= */
+nav a {
+  background: transparent;
+  padding: 0.8rem;
+  border-radius: 50%;
+  display: flex;
+ 
+  color: var(--color-light);
+  font-size: 1.2rem;
+
+  transition: var(--transition);
+}
+
+/* Hover */
+nav a:hover {
+  background: rgba(255,255,255,0.1);
+  color: var(--color-white);
+}
+
+/* Active */
+nav a.active {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+  nav {
+    bottom: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+}
